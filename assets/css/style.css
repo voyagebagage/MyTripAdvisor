@@ -17,8 +17,9 @@ header {
   display: flex;
   justify-content: space-between;
   /* align-items: center; */
-
+  box-sizing: border-box;
   font-weight: bold;
+  flex-shrink: 0;
 }
 
 /* ///___H_E_A_D_E_R__\\\\\ */
@@ -128,4 +129,22 @@ nav div:not(:last-child) {
 .col2 img:first-child {
   margin-bottom: 2px;
   text-align: ;
+}
+
+@media (max-width: 1184px) {
+  header {
+    background-color: rgb(114, 250, 159);
+  }
+}
+
+@media (max-width: 1024px) {
+  header {
+    background-color: royalblue;
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    background-color: salmon;
+  }
 }
