@@ -1,15 +1,20 @@
 body {
   font-family: "Trip Sans";
 }
-
-.header img {
-  width: 188px;
+* {
+  box-sizing: border-box;
 }
 .container {
   width: 1136px;
   margin: 0 auto;
-  /* border-bottom: solid salmon; */
-  box-sizing: border-box;
+  border: solid rgb(250, 248, 114);
+}
+
+/*  * \\\----------------///// *\
+    *                            * 
+     * ///___H_E_A_D_E_R__\\\\\ */
+.header img {
+  width: 188px;
 }
 
 header {
@@ -22,11 +27,11 @@ header {
   flex-shrink: 0;
 }
 
-/* ///___H_E_A_D_E_R__\\\\\ */
 header li {
   /* background-color: steelblue; */
   /* border: tomato 1px solid; */
   display: flex;
+  justify-content: space-between;
   border-radius: 20%;
   padding-left: 40px;
   padding-right: 5px;
@@ -59,6 +64,9 @@ header button {
 header button:hover {
   background-color: rgb(39, 42, 44);
 }
+/*  * \\\----------------///// *\
+    *                            * 
+     * ///___H1__M_E_N_U__\\\\\ */
 
 h1 {
   margin-top: 40px;
@@ -85,6 +93,10 @@ nav div {
   height: 87px;
   justify-content: space-between;
   cursor: pointer;
+  border-radius: 10%;
+}
+nav div:nth-child(8) {
+  display: none;
 }
 nav div:hover {
   background-color: rgb(0, 0, 0);
@@ -128,23 +140,89 @@ nav div:not(:last-child) {
 }
 .col2 img:first-child {
   margin-bottom: 2px;
-  text-align: ;
+  /* text-align: ; */
 }
+
+/*  * \\\-----------------------///// *\
+        *                          * 
+     * ///_R_E_S_P_O_N_S_I_V_E_1184_\\\\\ */
 
 @media (max-width: 1184px) {
   header {
     background-color: rgb(114, 250, 159);
   }
-}
 
+  nav div {
+    border: solid rgb(8, 8, 8) 2px;
+    padding: 15px;
+    font-size: 16px;
+    /* display: flex; */
+    font-family: inherit;
+    height: 18px;
+    /* justify-content: space-between; */
+    cursor: pointer;
+    border-radius: 10%;
+  }
+  nav div:nth-child(8) {
+    display: initial;
+  }
+
+  .firstline {
+    /* display: block; */
+    background-color: lawngreen;
+    display: flex;
+  }
+  nav .firstline::after:last-child {
+    content: "\a";
+    white-space: pre-line;
+  }
+  .secondline {
+  }
+}
+/*  * \\\-----------------------///// *\
+        *                          * 
+     * ///_R_E_S_P_O_N_S_I_V_E__1024\\\\\ */
 @media (max-width: 1024px) {
   header {
     background-color: royalblue;
     width: 100%;
   }
 }
+
+/*  * \\\-----------------------///// *\
+        *                          * 
+     * ///_R_E_S_P_O_N_S_I_V_E__768\\\\\ */
 @media (max-width: 768px) {
   header {
     background-color: salmon;
+    height: 50px;
+    justify-content: center;
+  }
+  .thingstoadd {
+    background-image: url(../img/search-solid.svg);
+    background-repeat: no-repeat;
+    /* background-position: right; */
+    /* display: flex; */
+    /* justify-content: flex-end; */
+  }
+  .header img {
+    width: 135px;
+  }
+  ul li,
+  header button {
+    display: none;
   }
 }
+/* .bg {
+    height: 500px;
+    width: 500px;
+    margin: 0 auto;
+    border: black solid 4px;
+    background-image: url(../img/fusee-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    display: flex;
+    justify-content: flex-end;
+  }
+  */
