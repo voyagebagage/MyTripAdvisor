@@ -19,6 +19,10 @@
     <link rel="stylesheet" href="./assets/fonts/TripSans-Regular.svg" />
     <!-- Import du fichier main.js -->
     <script src="./assets/JS/main.js"></script>
+    <!-- Import de axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <!-- font awsome -->
     <script
       src="https://kit.fontawesome.com/10fe7ece29.js"
       crossorigin="anonymous"
@@ -26,23 +30,23 @@
   </head>
 
   <body>
-    <!-- HEADER <<-----/////////----------------------->
+    <!------------- HEADER <<-----/////////----------------------->
     <header class="container">
-      <i class="fas fa-bars logo display hide"></i>
+      <i class="fas fa-bars hidden-big display-xs logo"></i>
       <img
         src="./assets/img/Tripadvisor_lockup_horizontal_secondary_registered.svg"
         alt="logo TripAdvisor"
       />
 
       <img
-        class="display hide"
+        class="hidden-big display-xs"
         src="./assets/img/Tripadvisor_lockup_horizontal_secondary_registered.svg"
         alt="logo TripAdvisor"
       />
-      <i class="fas fa-search logo display hide"></i>
+      <i class="fas fa-search hidden-big display-xs logo"></i>
 
       <input
-        class="hide"
+        class="hidden-xs"
         type="text"
         placeholder=""
         id="search"
@@ -51,41 +55,62 @@
 
       <ul class="thingstoadd">
         <li class="menus">
-          <i class="fas fa-pencil-alt hide"></i>
+          <i class="fas fa-pencil-alt display-xs"></i>
           <span>Avis</span>
         </li>
         <li class="menus">
-          <i class="far fa-bell hide"></i>
+          <i class="far fa-bell display-xs"></i>
           <span>Alertes</span>
         </li>
         <li class="menus">
-          <i class="far fa-heart hide"></i>
+          <i class="far fa-heart display-xs"></i>
           <span>Favoris</span>
         </li>
-        <button id="button" class="hide">Connectez-vous</button>
+        <button id="button" class="display-xs">Connectez-vous</button>
       </ul>
     </header>
     <!-- <<-----/////////---M_O_D_A_L___\\\\\\\\\--------->
-    <div class="masked">
-      <div class="modal">
-        <h7>Formulaire</h7>
+    <div class="modal hidden">
+      <div class="form">
+        <p>Formulaire</p>
+        <i class="fas fa-ellipsis-h to-website"></i>
+        <div id="contactForm" class="inputs">
+          <input
+            type="text"
+            placeholder="Prénom"
+            id="firstname"
+            name="firstname"
+            value="Oli"
+          />
+          <input
+            type="text"
+            placeholder="Nom"
+            name="lastname"
+            id="lastname"
+            value="le fru"
+          />
 
-        <input
-          type="text"
-          placeholder="Prénom"
-          id="firstname"
-          name="firstname"
-        />
-        <input type="text" placeholder="Nom" name="lastname" id="lastname" />
-        <input type="text" placeholder="email" name="email" id="email" />
+          <input
+            type="text"
+            placeholder="email"
+            name="email"
+            id="email"
+            value="jeannic@gmail.com"
+          />
 
-        <input type="text" placeholder="Sujet" name="object" id="object" />
-        <textarea
-          placeholder="votre message ici"
-          id="message"
-          name="message"
-        ></textarea>
-        <input type="submit" value="Envoyer le message" />
+          <input
+            type="text"
+            placeholder="Sujet"
+            name="object"
+            id="object"
+            value="ta mere"
+          />
+          <textarea placeholder="votre message ici" id="message">
+tout va bien
+        </textarea
+          >
+          <input type="submit" value="Envoyer le message" />
+        </div>
       </div>
     </div>
     <!-- <<-----/////////----------------------->
