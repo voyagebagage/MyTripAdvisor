@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TripAdvisor</title>
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="./assets/img/Tripadvisor_logoset_solid_green.svg"
+    />
+    <title>TripAdvisor, Le Nord</title>
 
     <!-- Import de la police  -->
     <!-- CSS -->
@@ -12,6 +17,8 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/stylesheet.css" />
     <link rel="stylesheet" href="./assets/fonts/TripSans-Regular.svg" />
+    <!-- Import du fichier main.js -->
+    <script src="./assets/JS/main.js"></script>
     <script
       src="https://kit.fontawesome.com/10fe7ece29.js"
       crossorigin="anonymous"
@@ -19,75 +26,195 @@
   </head>
 
   <body>
-    <link rel="stylesheet" href="./assets/css/style.css" />
-
-    <!-- HEADER -->
+    <!-- HEADER <<-----/////////----------------------->
     <header class="container">
+      <i class="fas fa-bars logo display hide"></i>
       <img
         src="./assets/img/Tripadvisor_lockup_horizontal_secondary_registered.svg"
         alt="logo TripAdvisor"
       />
 
+      <img
+        class="display hide"
+        src="./assets/img/Tripadvisor_lockup_horizontal_secondary_registered.svg"
+        alt="logo TripAdvisor"
+      />
+      <i class="fas fa-search logo display hide"></i>
+
+      <input
+        class="hide"
+        type="text"
+        placeholder=""
+        id="search"
+        name="search"
+      />
+
       <ul class="thingstoadd">
         <li class="menus">
-          <i class="fas fa-user-astronaut"></i><span>Avis</span>
+          <i class="fas fa-pencil-alt hide"></i>
+          <span>Avis</span>
         </li>
         <li class="menus">
-          <i class="fas fa-user-astronaut"></i><span> Favoris</span>
+          <i class="far fa-bell hide"></i>
+          <span>Alertes</span>
         </li>
         <li class="menus">
-          <i class="fas fa-user-astronaut"></i><span> Alertes</span>
+          <i class="far fa-heart hide"></i>
+          <span>Favoris</span>
         </li>
-        <button>Connectez-vous</button>
+        <button id="button" class="hide">Connectez-vous</button>
       </ul>
     </header>
+    <!-- <<-----/////////---M_O_D_A_L___\\\\\\\\\--------->
+    <div class="masked">
+      <div class="modal">
+        <h7>Formulaire</h7>
+
+        <input
+          type="text"
+          placeholder="Prénom"
+          id="firstname"
+          name="firstname"
+        />
+        <input type="text" placeholder="Nom" name="lastname" id="lastname" />
+        <input type="text" placeholder="email" name="email" id="email" />
+
+        <input type="text" placeholder="Sujet" name="object" id="object" />
+        <textarea
+          placeholder="votre message ici"
+          id="message"
+          name="message"
+        ></textarea>
+        <input type="submit" value="Envoyer le message" />
+      </div>
+    </div>
+    <!-- <<-----/////////----------------------->
     <main class="container">
       <h1>
-        <span class="red">Explorer </span><span class="black">Paris</span>
+        <span class="red">Découvrez </span
+        ><span class="black">le Grand Nord</span>
       </h1>
-      <span>
-        <nav class="menus">
-          <div class="firstline">
-            <span>Hotel</span> <i class="fas fa-poo"></i>
-          </div>
-          <div class="firstline">
-            <span>location de vacances</span> <i class="fas fa-poo"></i>
-          </div>
-          <div class="firstline">
-            <span>activité</span> <i class="fas fa-poo"></i>
-          </div>
-          <div class="firstline" style="white-space: pre-line">
-            <span> restaurantsssss</span><i class="fas fa-poo"></i>
-          </div>
-          <br />
-          <div class="secondline">
-            <span>Forum de voyage</span> <i class="fas fa-poo"></i>
-          </div>
-          <div class="secondline">
-            <span>vols</span> <i class="fas fa-poo"></i>
-          </div>
-          <div class="secondline">
-            <span>Croisière</span><i class="fas fa-umbrella-beach"></i>
-          </div>
-          <div class="second line"><span>Plus</span></div>
-        </nav>
-      </span>
+      <nav class="menus">
+        <div class="firstline">
+          <span>Hotel</span> <i class="fas fa-bed"></i>
+        </div>
+        <div class="firstline">
+          <span>location de vacances</span> <i class="fas fa-campground"></i>
+        </div>
+        <div class="firstline">
+          <span>activités</span> <i class="fas fa-skiing-nordic"></i>
+        </div>
+        <div class="firstline" style="white-space: pre-line">
+          <span> restaurants</span><i class="fas fa-utensils"></i>
+        </div>
+        <div class="secondline">
+          <span>Forum de voyage</span> <i class="fas fa-network-wired"></i>
+        </div>
+        <div class="secondline">
+          <span>vols</span> <i class="fas fa-plane-departure"></i>
+        </div>
+        <div class="secondline">
+          <span>Croisière</span><i class="fas fa-ship"></i>
+        </div>
+        <div class="second line">
+          <span>Plus</span><i class="fas fa-ellipsis-h"></i>
+        </div>
+      </nav>
+      <!-- <<-----/////////-\\\\\\\\\\------------->
+      <!-- <<----\\\\\\\\\\-/////////--------------->
       <div class="picture">
-        <div class="col1"><img src="./assets/img/caption1.jpg" /></div>
+        <div class="col1">
+          <img
+            src="./assets/img/25351967_10156196213108706_2894993876651767715_o.jpeg"
+          />
+        </div>
         <div class="col2">
-          <img src="./assets/img/caption1.jpg" /><img
-            src="./assets/img/caption1.jpg"
+          <img src="./assets/img/fb.jpeg" /><img
+            id="flip"
+            src="./assets/img/19679335_10155695367533706_1522443962806261897_o.jpeg"
           />
         </div>
       </div>
+      <!-- <<-----/////////----------------------->
+      <!-- <<-----/////////----------------------->
+      <div class="links">
+        <nav>
+          <a href="#">Europe </a><span> > </span> <a href="#">Nord </a
+          ><span> > </span>
+          <a href="#"> Cercle Polaire</a>
+        </nav>
+        <p>Visiter : Le Cercle</p>
+      </div>
+      <!-- <<-----/////////----------------------->
+      <!-- <<-----/////////----------------------->
+      <section class="introduction">
+        <div class="col1">
+          <h2>De la lumière à l'obscurité</h2>
+          <p>
+            Aucun autre endroit au monde ne fait autant déplacer de touristes
+            dans des conditions climatiques qui peuvent etre un challenge pour
+            certains. Ses Arurores Boréalis en son le secret. Ici les tempêtes
+            de soleil en font vibrer les petits aéroports du nord. L'été n'étant
+            pas visibles, cela vous permet d'explorer, mais attention...Si vous
+            laisser les rideaux ouverts, vous serez tiré de votre de lit de
+            force par le soleil de minuit et sa lumière infinissable.
+          </p>
+        </div>
+        <div class="col2">
+          <div class="top">
+            <h3>Le Cercle polaire: Commencez à organiser !</h3>
+            <p>
+              Créez un voyage pour enregistrer et organiser toutes vos idées et
+              les visualiser sur une carte.
+            </p>
+            <button>Créez un voyage</button>
+          </div>
+          <div class="bottom"></div>
+        </div>
+      </section>
+      <!-- <<-----/////////----------------------->
+      <!-- <<-----/////////----------------------->
+      <h5>Le Cercle : les immanquables</h5>
+      <!-- <<-----/////////----------------------->
+      <!-- <<-----/////////----------------------->
+
+      <section class="entertainment">
+        <div class="left">
+          <h6>Se divertir</h6>
+          <p>Des lieux à voir, des activités emblématiques du nord.</p>
+          <span>Tout afficher</span>
+        </div>
+        <div class="right">
+          <div class="slides">
+            <img
+              src="./assets/img/12094925_10153788125428706_952823543692510896_o.jpeg"
+            />
+          </div>
+          <div class="slides">
+            <img
+              src="./assets/img/82924614_208329753545051_5049623341704974854_n.jpeg"
+            />
+          </div>
+          <div class="slides">
+            <img src="./assets/img/d5.jpeg" />
+          </div>
+          <div class="slides">
+            <img
+              src="./assets/img/133948391_732668550992609_2403398253869404231_n.jpeg"
+            />
+          </div>
+          <div class="slides">
+            <img
+              src="./assets/img/125914089_673668756651156_399768621305244775_n.jpeg"
+            />
+          </div>
+          <div class="slides">
+            <img
+              src="./assets/img/12377770_10153918562013706_1761258440233981809_o.jpeg"
+            />
+          </div>
+        </div>
+      </section>
     </main>
   </body>
 </html>
-<article></article>
-<!-- <i class="fas fa-play"></i> -->
-<!-- <i class="fas fa-compact-disc"></i> -->
-<!-- <i class="fas fa-headphones"></i> -->
-<!-- <i class="far fa-eye"></i>
-<i class="fas fa-umbrella-beach"></i> -->
-<i class="fas fa-search"></i>
-<i class="fas fa-bars"></i>
