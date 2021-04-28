@@ -16,18 +16,24 @@ $.addEventListener("DOMContentLoaded", () => {
   });
   console.log("Page chargée");
 
-  //   contactForm = $.querySelector("#contactForm").addEventListener;
-  //   contactForm.addEventListener("submit", (event) => {
-  //     // la fonction preventDefault() annule le comportement par défaut du formulaire (le rafraîchissement de la page)
-  //     event.preventDefault();
-
-  //     const data = {
-  //       firstName: $.querySelector("#firstname").value,
-  //       lastName: $.querySelector("#lastname").value,
-  //       email: $.querySelector("#email").value,
-  //       subject: $.querySelector("#subject").value,
-  //       message: $.querySelector("#message").value,
-  //     };
-
-  //   });
+  contactForm = $.querySelector("#contactForm");
+  contactForm.addEventListener("submit", async (event) => {
+    // la fonction preventDefault() annule le comportement par défaut du formulaire (le rafraîchissement de la page)
+    event.preventDefault();
+    console.log("Page chargée");
+    const data = {
+      firstName: $.querySelector("#firstname").value,
+      lastName: $.querySelector("#lastname").value,
+      email: $.querySelector("#email").value,
+      subject: $.querySelector("#subject").value,
+      message: $.querySelector("#message").value,
+    };
+    const response = await axios.get("http://localhost:3000/", data);
+    console.log(response);
+    if (response.status !== 200) {
+      alert("n'as pas pu etre envoyé");
+    } else {
+      alert("sent ok :)");
+    }
+  });
 });

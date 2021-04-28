@@ -16,7 +16,7 @@ body {
 /*  * \\\----------------///// *\
     *                            * 
      * ///___H_E_A_D_E_R__\\\\\ */
-.hidden-big {
+header .hidden-big {
   display: none;
 }
 .display {
@@ -139,12 +139,13 @@ header button:hover {
   align-content: center;
   justify-content: space-between;
   padding-left: 8vw;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   border-radius: 10px;
   margin: 50px auto;
   font-family: "Roboto";
   font-weight: 400;
   margin-bottom: 10vw;
+  flex-direction: column;
 }
 .form i {
   color: rgb(0, 0, 0, 0.5);
@@ -184,8 +185,8 @@ header button:hover {
   outline: none;
 }
 
-div input,
-div textarea {
+form input,
+form textarea {
   width: 30vw;
   height: 2vh;
   border-radius: 5px;
@@ -196,11 +197,13 @@ div textarea {
   font-family: inherit;
   border: rgb(0, 0, 0);
 }
-div textarea {
+form textarea {
   height: 200px;
   margin-bottom: 20px;
 }
 input[type="submit"] {
+  outline: none;
+
   height: 6vh;
   font-size: 2vw;
   text-align: center;
@@ -612,10 +615,12 @@ h6 {
   .hidden-xs {
     display: none;
   }
+  header .display-xs {
+    display: contents;
+  }
   .display-xs {
     display: contents;
   }
-
   /* HEADER */
   header nav,
   header ul {
