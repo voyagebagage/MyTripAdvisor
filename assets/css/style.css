@@ -154,16 +154,14 @@ header button:hover {
   top: 10px;
   right: 20px;
 }
-
-/* background-color: rgb(0, 0, 0, 0.8); */
-/* height: 689px;
-  width: 500px; */
-/* flex-direction: column; */
-/* align-content: center;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  border-radius: 10px; */
-/* } */
+h4 {
+  /* text-align: center; */
+  font-size: 2vw;
+  margin: 1vh 0;
+  margin-left: -7vw;
+  color: rgb(143, 139, 139);
+  font-weight: bold;
+}
 .modal p {
   /* display: flex; */
   /* position: top; */
@@ -207,7 +205,7 @@ input[type="submit"] {
   height: 6vh;
   font-size: 2vw;
   text-align: center;
-  background-color: rgb(250, 99, 94);
+  background-color: rgb(255, 0, 0);
   color: white;
   line-height: 26px;
   margin-bottom: 50px;
@@ -215,12 +213,16 @@ input[type="submit"] {
   padding-bottom: 5vh;
 }
 input[type="submit"]:hover {
-  background-color: rgb(255, 0, 0);
+  /* background-color: rgb(255, 0, 0); */
   cursor: pointer;
 }
 
-input[type="submit"]:focus {
+/* input[type="submit"]:focus {
   outline: rgba(253, 138, 161, 0.904) solid 2px;
+} */
+
+.send-button-disabled {
+  background-color: rgba(253, 138, 161, 0.945) solid 2px;
 }
 /*  * \\\----------------///// *\
     *                            * 

@@ -75,6 +75,7 @@
     <div class="modal hidden">
       <div class="form">
         <p>Formulaire</p>
+        <h4 class="hidden">Nous avons reçu votre message</h4>
         <i class="fas fa-ellipsis-h to-website"></i>
         <form id="contactForm" class="inputs">
           <input
@@ -82,36 +83,14 @@
             placeholder="Prénom"
             id="firstname"
             name="firstname"
-            value="Oli"
           />
-          <input
-            type="text"
-            placeholder="Nom"
-            name="lastname"
-            id="lastname"
-            value="le fru"
-          />
+          <input type="text" placeholder="Nom" name="lastname" id="lastname" />
 
-          <input
-            type="text"
-            placeholder="email"
-            name="email"
-            id="email"
-            value="jeannic@gmail.com"
-          />
+          <input type="text" placeholder="email" name="email" id="email" />
 
-          <input
-            type="text"
-            placeholder="Sujet"
-            name="subject"
-            id="subject"
-            value="ta mere"
-          />
-          <textarea placeholder="votre message ici" id="message">
-tout va bien
-        </textarea
-          >
-          <input type="submit" value="Envoyer le message" />
+          <input type="text" placeholder="Sujet" name="subject" id="subject" />
+          <textarea placeholder="votre message ici" id="message"></textarea>
+          <input type="submit" id="send-button" value="Envoyer le message" />
         </form>
       </div>
     </div>
